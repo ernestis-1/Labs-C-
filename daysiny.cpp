@@ -1,4 +1,5 @@
 
+#include <cassert>
 
 bool IsLeapYear_New(int y)
 {
@@ -16,6 +17,27 @@ int DaysInYear(int y)
 	else
 	{
 		return 365;
+	}
+
+
+}
+
+int DaysInYearRange(int y1, int y2)
+{
+	assert(y1 < y2);
+	int result = 0;
+
+	for (int i = y1; i <= y2; i++)
+	{
+		if (IsLeapYear_New(i))
+		{
+			result += 366;
+		}
+		else
+		{
+			result += 365;
+		}
+
 	}
 
 
