@@ -39,6 +39,6 @@ int DaysInYearRange(int y1, int y2)
 		}
 
 	}
-
+	return result;
 
 }
